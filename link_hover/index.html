@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link_ hover</title>
+    <style>
+        body{
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            cursor: pointer;
+        }
+        .list {
+            display: flex;
+            list-style: none;
+            font-size: 1rem;
+        }
+        .list li { 
+            margin : 2rem;
+        }
+        .line-effect {
+            position: fixed;
+            width: 0px; 
+            height: 2px;
+            background-color:aqua ;
+            pointer-events: none;
+            transition: all linear 0.2s;
+        }
+    </style>
+</head>
+<body>
+ <div class="container">
+    <div class="list-link">
+        <ul class="list">
+            <li>HOME</li>
+            <li>CONTACT</li>
+            <li>ABOUT US</li>
+            <li>WORK</li>
+        </ul>
+    </div>
+ </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

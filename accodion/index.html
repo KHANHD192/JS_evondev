@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accodion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <style>
+    html{
+        font-size: 62.5%;
+        box-sizing: border-box;
+        background-color: aliceblue;
+    }
+    
+    .accodion{
+        margin: 100px auto;
+        width: 50rem;
+       
+    }
+    .accodion-heading{
+        width: 100%;
+        height: 4rem;
+        background-color: white;
+        box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.158);
+        border-radius: 7px;
+        padding-top: 10px;
+        padding-left: 10px;
+        position: relative;
+        
+    }
+    .accodion-heading .heading {
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .fa-sharp{
+        position: absolute;
+        right: 2rem;
+        top :50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+    }
+
+    .accodion-content{
+       
+        width: 100%;
+        height: 20rem;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        background-color: white;
+        padding-top: 3rem;
+        border-radius: 10px;
+
+    }
+    
+     .hide{
+        display: none;
+    }
+    .accodion-heading * {
+        pointer-events: none;
+    }
+ </style> 
+</head>
+ <body>
+    <div class="accodion">
+        <div class="accodion-heading">
+              <span class="heading">Welcome to KMA</span>
+             <div class="icon">
+                  <i class="fa-sharp fa-solid fa-caret-down"></i>
+                </div>
+        </div>
+        <div class="accodion-content hide">
+              <p class="content">
+                Học viện kỹ thuật mật mã
+              </p>
+        </div>
+    </div>
+    <div class="accodion">
+        <div class="accodion-heading">
+              <span class="heading">Welcome to KMA</span>
+             <div class="icon">
+                  <i class="fa-sharp fa-solid fa-caret-down"></i>
+                </div>
+        </div>
+        <div class="accodion-content hide">
+              <p class="content">
+                Học viện kỹ thuật mật mã
+              </p>
+        </div>
+    </div>
+    <script src="./app.js" ></script>
+ </body>
+ </html>
