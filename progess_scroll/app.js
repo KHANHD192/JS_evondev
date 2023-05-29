@@ -15,11 +15,12 @@ function handler () {
     window.addEventListener('scroll',function(){
         // Lấy ra position đang ở hiện tại
         const scrollTop = window.pageYOffset;
+     // chiều cao của scrollbar ! 
         const height = 
         document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        // scrollHeight : lấy ra height làm xuất hiện scroll , là tất cả 
+        // scrollHeight : lấy ra height làm xuất hiện scroll , là tất cả , tổng chiều cao ! 
         // clientHeight :  chính là màn hình chúng ta nhìn thấy trước khi scroll ( khung nhìn của user)
-        // trừ đi thì được số px của height có thể scroll 
+        // trừ đi thì được số px của height có thể scroll ( hay nó chính là chiều cao của scollbar)
         const width_percent = (scrollTop / height) * 100;
        progess.style.width =`${width_percent}%`;
     })
