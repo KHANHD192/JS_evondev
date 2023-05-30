@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <style>
+
+       html{
+        box-sizing: border-box;
+        font-size: 62.5%;
+       }
+       .tab_content {
+         display: none;
+       }
+       .tab-item.active{
+        background-color: aqua;
+        color: white;
+       
+       }
+       .tab-item{
+        background-color: rgba(192, 192, 192, 0.24);
+        color:rgb(49, 90, 90);
+       }
+       body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+       }
+       .tab_container{
+        margin-top:5rem;
+        width: 50rem;
+        height: 12rem;
+        box-shadow: 2px 2px 3rem rgba(0, 0, 0, 0.116);
+        /* border: 1px solid slategray; */
+        position: relative;
+        border-radius: 2rem;
+       
+       }
+       .tab_list{
+        max-width: 500px;
+        margin-top: 2rem;
+        overflow-x: auto;
+        overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+       }
+       .list_content{
+        display: flex;
+       
+        
+       }
+       .tab_list::-webkit-scrollbar {
+         display: none;
+}
+       .tab-item{
+        user-select: none;
+        width: 12rem;
+        height: 3rem;
+        border-radius: 999px;
+        cursor: pointer;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.3rem;
+        padding-top: 1rem;
+        white-space: nowrap;
+       }
+       .tab_wrap{
+        margin-top: 3rem;
+         text-align: center;
+       }
+       .tab_content.active{
+            display: block;
+       }
+    </style>
+</head>
+<body>
+    <div class="tab_container">
+        <div class="tab_list">
+           <div class="list_content">
+            <div class="tab-item active">HOME</div>
+            <div class="tab-item ">NEW</div>
+            <div class="tab-item ">NEW</div>
+            <div class="tab-item ">NEW</div>
+            <div class="tab-item ">ABOUT US</div>
+            <div class="tab-item ">ABOUT US</div>
+            <div class="tab-item ">ABOUT US</div>
+           </div>
+        </div>
+       
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hight_light-search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* nhanh 2 */
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #202124;
+        }
+        .container{
+            margin-top: 20px ;
+            width: 700px;
+          
+            border: 1px solid rgba(0, 0, 0, 0.205);
+            border-radius: 16px;
+            background-color: #303134;
+        }
+        .input{
+            width: 100%;
+        }
+        .input input {
+            width: calc(100% - 8px);
+            height: 30px;
+            outline: none;
+            position: relative;
+        }
+       .dropdown_item{
+         padding-left:2rem;
+         margin-bottom: 2rem;
+         color: white;
+       }
+       .dropdown_item:first-child{
+        margin-top:1rem;
+       }
+       .dropdown_item i {
+        color: slategray;
+        margin-right: 1rem;
+       }
+       .primary {
+        color : aqua;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <input type="text" >
+        </div>
+        <div class="drop_down">
+            <div class="dropdown_item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                HOW TO LEARN CSS</div>
+            <div class="dropdown_item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                THE BEST WAY TO LEARN JS</div>
+            <div class="dropdown_item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                KHANH DEP TRAI VCL</div>
+        </div>
+        
+    </div>
+    <script src="./app.js" ></script>
+</body>
+</html>
