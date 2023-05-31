@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>TODOLIST</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width: 30%;
+            border-radius: 16px;
+            margin-top: 2rem;
+            background-color:#EBECF0 ;
+            padding :12px;
+        }
+        .container_tilte{
+            font-weight: 600;
+        }
+        .container__content{
+            width: 100%;
+            height: 20rem;
+            overflow: auto;
+           overflow: -moz-scrollbars-none;
+           -ms-overflow-style: none;
+          
+        }
+        .container__content::-webkit-scrollbar{
+            width: 0 !important;
+             display: none; 
+        }
+        .todo_list{
+             width: 100%;
+             height: auto;
+        }
+        .todo_item{
+            width: 100%;
+            height: 5rem;
+            background-color:#FFFFFF ;
+            border: 1px solid white;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.151);
+            position : relative;
+            margin-bottom: 5px;
+        }
+        .status{
+            position: absolute;
+            top:6px;
+            left:6px;
+            width: 40px;
+            height: 10px;
+            background-color: green;
+            border-radius: 10px;
+        }
+        .heading{
+           color: red;
+           margin-top:20px;
+           margin-left: 1.6rem;
+           font-size: 1.2rem;
+           font-weight: 600;
+           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .ders{
+            margin-top: 4px;
+            font-style: italic;
+            margin-left: 1.6rem;
+        }
+        .fa-trash{
+            position: absolute;
+            top:50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: blue;
+        }
+           .input_todo{
+            margin-top: 1rem;
+            text-align: center;
+            width: 9.2rem;
+            height: auto;
+            background-color: rgb(25, 230, 230);
+            border-radius: 999px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: rgb(192, 17, 17);
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            cursor: pointer;
+           }
+           .input_todo i{
+            font-size: 1rem;
+           }
+            button{
+                outline: none;
+                margin-top: 1rem;
+                border-radius: 2rem;
+                background-color: rgb(25, 230, 230);
+            
+            }
+            .input_form input{
+                width: calc(100% - 6px);
+                height: auto;
+                height: 30px;
+                outline: none;
+                padding: 3px;
+                border: 1px solid transparent;
+                border-radius: 3px;
+            }
+            
+    </style>
+</head>
+<body>
+  <div class="container">
+   <div class="container_tilte">
+     <p class="tilte">Doing</p>
+   </div>
+   <div class="container__content">
+     <div class="todo_list">
+        <!-- <div class="todo_item">
+            <div class="status"></div>
+            <div class="heading">Learning Enghlish</div>
+            <div class="ders">Expire: 10am today </div>
+            <i class="fa-solid fa-trash"></i>
+         </div> -->
+     </div>
+    </div>
+    <div class="input_form">
+        <form  class="input">
+            <input name="todo" type="text" placeholder="write something " autocomplete="off">
+            <button type="submit">ADD</button>
+        </form>
+    </div>
+    <div class="input_todo">
+    </div>
+  
+
+  </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
