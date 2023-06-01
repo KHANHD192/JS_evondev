@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>email</title>
+    <style>
+     html{
+        font-size: 62.5%;
+        box-sizing: border-box;
+     }
+     body{
+        display: flex;
+        justify-content: center;
+        align-items:  center;
+     }
+     .form1{
+        margin-top: 2rem;
+        width: 30rem;
+        height: 10rem;
+        border: 1px solid rgba(92, 75, 75, 0.192);
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.24);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+     }
+     #email_input{
+        font-size: 2rem;
+        font-weight: 600;
+        color:red;
+        margin-bottom: 1rem;
+     }
+    #email{
+      outline: none;
+      height: 50px;
+      border: 1px solid whitesmoke;
+      border-radius: 16px;  
+      padding: 10px;
+    }
+    button {
+        margin-top: 1rem;
+        font-style:italic;
+        font-weight: bold;
+        color:blue;
+        height: 6rem;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+    .error {
+        font-size: 2rem;
+        color: red;
+        font-style: italic;
+    }
+    .active{
+       display: block !important;
+    }
+    .fa-circle-check{
+        position: absolute;
+        top:50%;
+        right: 30px;
+        transform: translateY(-50%);
+        font-size: 1.7rem;
+        color: green;
+        display: none;
+        z-index: 999;
+    }
+
+    </style>
+</head>
+ 
+<body>
+    <form action="" class="form1">
+        <label for="email" id="email_input">Email</label>
+        <input id="email" name="email" type="text" placeholder="username@gmail.com">
+        <i class="fa-solid fa-circle-check"></i>
+        <button type="submit">Validator</button>
+    </form>
+    <script src="./app.js"></script>
+</body>
+</html>
