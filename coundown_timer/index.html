@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+ <style>
+ body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right,rgb(243, 104, 220)40%,blue );
+    background-repeat:no-repeat ;
+    display: flex;
+    justify-content:center;
+   align-items:center;
+   margin:0;
+ }
+ .container{
+    width: 32rem;
+    height:12rem;
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.container_timer_list{
+    padding :15%;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+.container_timer_list .item {
+    height: 4rem;
+    width: 25%;
+   display: flex;
+   flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.item .number{
+ font-size: 4rem;
+ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ color: rgb(204, 14, 204);
+}
+.item .text {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight:600;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%); 
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+ </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container_timer_list">
+            <div class="item">
+                <span class="number days">0</span>
+                <span class="text">days</span>
+            </div>
+            <div class="item">
+                <span class="number hours">0</span>
+                <span class="text">hours</span>
+            </div>
+            <div class="item">
+                <span class="number minutes">0</span>
+                <span class="text">minutes</span>
+            </div>
+            <div class="item">
+                <span class="number seconds">0</span>
+                <span class="text">seconds</span>
+            </div>
+           
+        </div>
+    </div>
+ <script src="./app.js"></script>    
+</body>
+</html>
