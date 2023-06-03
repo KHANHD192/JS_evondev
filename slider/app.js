@@ -22,16 +22,21 @@ window.addEventListener('load',function(){
 
             }else if(e.target.matches('.fa-arrow-left') && index >0){
                 currentPosition += widthOfItem;
+                console.log(currentPosition);
                 silder_main.style.left =`${currentPosition}px`;
                 index--;
                 document.querySelector('.slider_dots-item.active').classList.remove('active');
                 silder_dots_item[index].classList.add('active');
                 // handler dots slider
             }else if(e.target.matches('.slider_dots-item')){
-                silder_main.style.left =`${e.target.dataset.index * -widthOfItem}px`;
+                 // fix bug Type coercion , because dataset return to string -> 
+                currentPosition =parseInt(`${e.target.dataset.index * -widthOfItem}`);
+                silder_main.style.left =`${currentPosition}px`;
                 index=e.target.dataset.index;
                 document.querySelector('.slider_dots-item.active').classList.remove('active');
                 silder_dots_item[index].classList.add('active');
+                console.log(currentPosition);
+                console.log(index);
             }
              
 
