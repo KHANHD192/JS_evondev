@@ -11,7 +11,7 @@ window.addEventListener('load',function(){
         silder_dots_item[index].classList.add('active');
     }
     function handler(e){
-        // setdefault
+        // pre and next slider
               if(e.target.matches('.fa-arrow-right') && index < ArrayItem.length -1 ){
                   currentPosition -= widthOfItem;
                   silder_main.style.left =`${currentPosition}px`;
@@ -26,6 +26,7 @@ window.addEventListener('load',function(){
                 index--;
                 document.querySelector('.slider_dots-item.active').classList.remove('active');
                 silder_dots_item[index].classList.add('active');
+                // handler dots slider
             }else if(e.target.matches('.slider_dots-item')){
                 silder_main.style.left =`${e.target.dataset.index * -widthOfItem}px`;
                 index=e.target.dataset.index;
