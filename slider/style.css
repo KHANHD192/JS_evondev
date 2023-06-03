@@ -1,0 +1,97 @@
+
+body{
+    margin: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+.slider{
+    max-width: 600px;
+    margin:25px auto;
+    position: relative;
+    user-select: none;
+}
+.slider .fa-arrow-left {
+    position: absolute;
+    top:50%;
+    left: -18px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    z-index: 999;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    background-color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.slider .fa-arrow-right {
+    position: absolute;
+    top:50%;
+    right: -18px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    z-index: 999;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    background-color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.slider i {
+    box-shadow: 0 3px 30px rgba(0, 0, 0, 0.466);
+}
+.slider_dots{
+    width: 4rem;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    bottom: 10px;
+    left:50%;
+    transform: translateX(-50%);
+    list-style: none;
+    justify-content: space-between;
+}
+.slider_dots .slider_dots-item{
+ width: 10px;
+ height: 10px;
+ border-radius: 100%;
+ background-color:white;
+}
+.slider_dots-item.active{
+    background-color: aquamarine;
+}
+.slider_wrapper{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;   
+    border-radius: 12px;
+}
+.slider_main{
+    position: relative;
+    display: flex;
+}
+.slider_item {
+    transition: 0.25 linear all ;
+    width: 100%;
+    height: 100%;
+    flex: 1 0 100%;
+    /*
+    flex: 1 0 100%; là một thuộc tính CSS được sử dụng để điều chỉnh cách mà một phần tử con (child element) trong một container flexbox sẽ co dãn và căn chỉnh.
+
+Trong cú pháp flex: <flex-grow> <flex-shrink> <flex-basis>;,
+
+<flex-grow>: Đây là giá trị đại diện cho tỉ lệ tăng kích thước của phần tử con so với các phần tử con khác trong cùng một container. Nếu bạn đặt flex-grow thành 1, có nghĩa là phần tử con sẽ mở rộng và chiếm tất cả khoảng trống còn lại trong container. Nếu tất cả các phần tử con trong container đều có cùng flex-grow là 1, chúng sẽ chia tỷ lệ như nhau để điền vào không gian còn lại.
+
+<flex-shrink>: Đây là giá trị đại diện cho tỉ lệ co lại của phần tử con so với các phần tử con khác khi không đủ không gian trong container. Nếu bạn đặt flex-shrink thành 0, phần tử con sẽ không co lại và giữ kích thước ban đầu của nó. Nếu bạn đặt flex-shrink thành 1, phần tử con sẽ co lại tỷ lệ với phần tử con khác để vừa với không gian hiện có.
+
+<flex-basis>: Đây là giá trị đại diện cho kích thước ban đầu của phần tử con. Trong trường hợp flex-basis là 100%, phần tử con sẽ có kích thước ban đầu bằng 100% chiều rộng của container. Nếu bạn đặt flex-basis thành một giá trị cụ thể như flex-basis: 200px;, phần tử con sẽ có kích thước ban đầu là 200px.
+    */
+}
+.slider_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
