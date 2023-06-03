@@ -1,7 +1,7 @@
 window.addEventListener('load',function(){
   let number = document.querySelectorAll('.number');
   
-  let date = "Fri Jun 04 2023 20:02:33 GMT+0700 (Indochina Time)";
+  let date = "Fri Dec 04 2023 20:02:33 GMT+0700 (Indochina Time)";
   let timeEnd = new Date (date) ;
   let days,hours,minutes,seconds;
   
