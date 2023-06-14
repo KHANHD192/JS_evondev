@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LÀM QUEN FETCH </title>
+ <style>
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+    .joke{
+        height: calc(100% - 10rem );
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column;
+    }
+    .joke_para{
+    font-size: 1rem;
+    margin-top: 2rem;
+    }
+    .joke_button{
+        border:  0;
+        outline: none;
+        display: block;
+        width: 200px;
+        height: 50px;
+        border-radius: 8px;
+        color :white;
+        background-color: #20e3b2;
+        cursor: pointer;
+        position: relative;
+    }
+    .button_loading{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 20px;
+        height:20px;
+        border: 5px solid transparent;
+        border-left-color: white;
+        border-radius: 50%;
+        animation: spin 0.4s linear infinite;
+        display: none;
+    }
+    @keyframes spin {
+        from{
+            /* top:50%;
+            left: 50%; */
+            transform: translate(-50%,-50%) rotate(360deg);
+            
+        }
+    }
+    .joke.is_loading .joke_button span{
+        display: none;
+    }
+    .joke.is_loading .joke_button .button_loading{
+        display: block;
+    }
+    .joke.is_loading .joke_button {
+       opacity: 0.5;
+       pointer-events: none;
+    }
+ </style>
+</head>
+<body>
+    <div class="joke ">
+        <button class="joke_button">
+            <div class="button_loading"></div>
+            <span class="">Get random joke</span>
+        </button>
+        <h1 class="joke_para">
+            Loading...
+        </h1>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
