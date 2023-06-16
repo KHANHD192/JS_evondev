@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pic_sum</title>
+    <style>
+        .image{
+            width: calc( 100vw - 130px);
+            height: auto;
+            padding: 50px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,1fr);
+            grid-gap:25px;
+            margin-bottom: 20px;
+        }
+        .image-item{
+         /* width: auto; */
+         padding : 10px ;
+        border-radius: 10px;
+        background-color: white;
+       border: 1px solid seashell;
+        }
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .Pic_sum__button{
+        border:  0;
+        outline: none;
+        display: block;
+        width: 200px;
+        height: 50px;
+        border-radius: 8px;
+        color :white;
+        background-color: #20e3b2;
+        cursor: pointer;
+        position: relative;
+        margin : 0  auto;
+        display: none;
+      
+    }
+    .button_loading{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 20px;
+        height:20px;
+        border: 5px solid transparent;
+        border-left-color: white;
+        border-radius: 50%;
+        animation: spin 0.4s linear infinite;
+        display: none;
+    }
+    @keyframes spin {
+        from{
+            /* top:50%;
+            left: 50%; */
+            transform: translate(-50%,-50%) rotate(360deg);
+            
+        }
+    }
+    .Pic_sum__button.is_loading span{
+        display: none;
+    }
+    .Pic_sum__button.is_loading .button_loading{
+        display: block;
+    }
+    .Pic_sum__button.is_loading  {
+       opacity: 0.5;
+       pointer-events: none;
+    }
+    .container__button{
+
+    }
+    </style>
+</head>
+<body>
+  <div class="image">
+  
+  </div>
+  <div class="container__button">
+      <button class="Pic_sum__button ">
+        <div class="button_loading"></div>
+        <span class="">See More</span>
+       </button>
+  </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
