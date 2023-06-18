@@ -6,7 +6,7 @@ let button = $("button");
 async function start(){
    getCoures();
    handlForm();
-
+   handlDelete();
   }
   start();
 // function 
@@ -18,8 +18,9 @@ async function getCoures(){
 function render(data){
     const htmls = data.map(function(item){
       return `
-            <li>
-                <h4>${item.name}</h4>
+      <li class="list-item "data-id =${item.id}>
+      <h4 style ="display:inline-block">${item.name}</h4>
+            <i  class="fa-sharp fa-solid fa-xmark"></i>
             </li>
       `;
     });
@@ -30,14 +31,19 @@ function handlForm(){
     e.preventDefault();
   let  Name = this.elements['name'].value;
   let  desr = this.elements['desc'].value;
-     let data = {
-      name : Name,
-      desr : desr,
-     }
-     creatC(data);
+  let data = {
+    name : Name,
+    desr : desr,
+  }
+  if(Name  && desr ){
+    creatC(data);
+
+  }
+  this.elements['name'].value="";
+  this.elements['desc'].value="";
   })
 }
-
+// thêm 
  async function creatC(data){
   var option = {
     method : "POST",
@@ -49,5 +55,22 @@ function handlForm(){
   
  let response = await fetch(endpoint,option);
  let data1 = await response.json();
-  console.log(data1);
+ getCoures();
+ }
+ async function DeleteCourse(id){
+   let response = await fetch(endpoint+"/"+id,{
+    method : "DELETE",
+   });
+   let data = await response.json();
+  //  console.log(data); return empty 
+ }
+ function handlDelete(){
+  list_item.addEventListener('click',function(e){
+    if(e.target.matches(".fa-xmark")){
+      // console.log(e.target.parentElement);
+      let id_item = e.target.parentElement.dataset.id;
+      DeleteCourse(id_item);
+      e.target.parentElement.remove();
+    }
+  })
  }
